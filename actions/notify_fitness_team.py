@@ -30,8 +30,11 @@ class NotifyFitness(Action):
 
         with smtplib.SMTP(self.smtp_server, port=self.smtp_port) as smtp_server:
             smtp_server.ehlo()
-            if self.smtp_port == 587:
-                smtp_server.starttls()
-            if self.smtp_user:
-                smtp_server.login(user=self.smtp_user, password=self.smtp_pass)
-            smtp_server.send_message(msg=msg)
+
+            print(f'Username is {self.smtp_user} and config is {self.config["smtp_user"]}')
+
+            # if self.smtp_port == 587:
+            #     smtp_server.starttls()
+            # if self.smtp_user:
+            #     smtp_server.login(user=self.smtp_user, password=self.smtp_pass)
+            # smtp_server.send_message(msg=msg)

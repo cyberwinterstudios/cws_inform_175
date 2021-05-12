@@ -3,7 +3,7 @@ smtp_server:
   type: "string"
   required: true
 smtp_port:
-  description: "Port for SMTP use (25 or 567)"
+  description: "Port for SMTP use (25 or 587)"
   type: "string"
   required: true
 smtp_user:
