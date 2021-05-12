@@ -1,0 +1,15 @@
+name: "airmen_fitness_scorecard_submitted"
+pack: "cws_inform_175"
+description: "Receive incoming webhook when scorecard is submitted"
+enabled: true
+
+trigger:
+  type: "core.st2.webhook"
+  parameters:
+    url: "175/scorecard_submitted"
+
+action:
+  ref: "cws_inform_175.notify_fitness_team"
+  parameters:
+    name: "{{trigger.body.ticket.airman_name}}"
+    category: "{{trigger.body.ticket.category}}"

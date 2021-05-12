@@ -1,0 +1,25 @@
+smtp_server:
+  description: "The smtp server address"
+  type: "string"
+  required: true
+smtp_port:
+  description: "Port for SMTP use (25 or 567)"
+  type: "string"
+  required: true
+smtp_user:
+  description: "The smtp username"
+  type: "string"
+  required: false
+smtp_password:
+  description: "The smtp users password"
+  type: "string"
+  secret: true
+  required: false
+from_address:
+  description: "The from address for the email"
+  type: "string"
+  required: true
+to_address:
+  description: "Who to send the email to"
+  type: "string"
+  required: true
