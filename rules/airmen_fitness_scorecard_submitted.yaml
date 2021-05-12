@@ -13,3 +13,8 @@ action:
   parameters:
     name: "{{trigger.body.ticket.airman_name}}"
     category: "{{trigger.body.ticket.category}}"
+    abs_score: "{{trigger.body.ticket.abdominal_circumference_score}}"
+    push_score: "{{trigger.body.ticket.push_up_score}}"
+    sit_score: "{{trigger.body.ticket.sit_up_score}}"
+    run_score: "{{trigger.body.ticket.run_walk_score}}"
+    overall_score: "{{trigger.body.ticket.points_earned}}"

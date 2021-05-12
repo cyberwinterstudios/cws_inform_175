@@ -17,21 +17,20 @@ class NotifyFitness(Action):
         self.from_address = self.config['from_address']
         self.to_address = self.config['to_address']
 
-    def run(self, name, category):
+    def run(self, name, category, abs_score, push_score, sit_score, run_score, overall_score):
         msg = EmailMessage()
 
         msg['From'] = self.from_address
         msg['To'] = self.to_address
         msg['Subject'] = "Fitness Scorecard Results"
 
-        body = f'Airman {name} has completed a fitness exam with an outcome of {category}.'
+        body = f'Airman {name} has completed a fitness exam with an outcome of {category}. Detailed score information below:\n\n' \
+               f'Abdominal Score: {abs_score}\nPush Up Score: {push_score}\nSit Up Score: {sit_score}\nRun/Walk Score: {run_score}\nOverall Score: {overall_score}'
 
         msg.set_content(body)
 
         with smtplib.SMTP(self.smtp_server, port=self.smtp_port) as smtp_server:
             smtp_server.ehlo()
-
-            print(f'Username is {self.smtp_user} and config is {self.config["smtp_user"]}')
 
             if self.smtp_port == 587:
                 smtp_server.starttls()

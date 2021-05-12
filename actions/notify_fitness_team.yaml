@@ -12,3 +12,23 @@ parameters:
     type: "string"
     required: true
     position: 1
+  abs_score:
+    type: "string"
+    required: true
+    position: 2
+  push_score:
+    type: "string"
+    required: true
+    position: 3
+  sit_score:
+    type: "string"
+    required: true
+    position: 4
+  run_score:
+    type: "string"
+    required: true
+    position: 5
+  overall_score:
+    type: "string"
+    required: true
+    position: 6
