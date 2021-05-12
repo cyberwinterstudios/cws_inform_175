@@ -6,7 +6,7 @@ keywords:
   - inform
   - readiness
   - 175
-version: 0.1.0
+version: 0.1.1
 python_versions:
   - "3"
 dependencies:

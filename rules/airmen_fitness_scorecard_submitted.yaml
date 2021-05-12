@@ -6,7 +6,7 @@ enabled: true
 trigger:
   type: "core.st2.webhook"
   parameters:
-    url: "175/scorecard_submitted"
+    url: "mdang/scorecard_submitted"
 
 action:
   ref: "cws_inform_175.notify_fitness_team"
