@@ -1,5 +1,5 @@
 name: "airmen_fitness_scorecard_submitted"
-pack: "cws_inform_175"
+pack: "cws_inform_mdang"
 description: "Receive incoming webhook when scorecard is submitted"
 enabled: true
 
@@ -9,7 +9,7 @@ trigger:
     url: "mdang/scorecard_submitted"
 
 action:
-  ref: "cws_inform_175.notify_fitness_team"
+  ref: "cws_inform_mdang.notify_fitness_team"
   parameters:
     name: "{{trigger.body.ticket.airman_name}}"
     category: "{{trigger.body.ticket.category}}"
