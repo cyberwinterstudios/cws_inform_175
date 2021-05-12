@@ -2,7 +2,7 @@ name: "notify_fitness_team"
 runner_type: "python-script"
 description: "Notifies fitness team of newly submitted scorecard"
 enabled: true
-entry_point: "notify_Fitness_team.py"
+entry_point: "notify_fitness_team.py"
 parameters:
   name:
     type: "string"

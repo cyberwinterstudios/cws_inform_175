@@ -1,12 +1,12 @@
-ref: cws_inform_175
-name: CWS Inform 175
+ref: cws_inform_mdang
+name: CWS Inform MDANG
 description: All info required for the CWS Inform 175 Use Cases
 keywords:
   - cws
   - inform
   - readiness
   - 175
-version: 0.1.1
+version: 0.1.2
 python_versions:
   - "3"
 dependencies:
