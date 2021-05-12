@@ -11,4 +11,4 @@ parameters:
   category:
     type: "string"
     required: true
-    position 1
+    position: 1
