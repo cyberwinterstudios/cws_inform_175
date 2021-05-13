@@ -22,7 +22,7 @@ class NotifyFitness(Action):
 
         msg['From'] = self.from_address
         msg['To'] = self.to_address
-        msg['Subject'] = "Fitness Scorecard Results"
+        msg['Subject'] = f"{name} Fitness Scorecard Results"
 
         body = f'Airman {name} has completed a fitness exam with an outcome of {category}. Detailed score information below:\n\n' \
                f'Abdominal Score: {abs_score}\nPush Up Score: {push_score}\nSit Up Score: {sit_score}\nRun/Walk Score: {run_score}\nOverall Score: {overall_score}'
